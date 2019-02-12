@@ -1,0 +1,46 @@
+{{ form_start(contactMeForm) }}
+
+<div class="row">
+    <div class="col-md-6">
+        {{ form_row(contactMeForm.name, {
+            attr: {
+                'class':'form-control',
+                'id':'name',
+                'placeholder':'Your Name *',
+                'data-validation-required-message':'Please enter your name.',
+                'value':''
+            }
+        }) }}
+
+        {{ form_row(contactMeForm.email, {
+            attr: {
+                'class':'form-control',
+                'placeholder':'Your Email *',
+                'data-validation-required-message':'Please enter your email address.',
+                'value':''
+            }
+        })  }}
+
+        {{ form_row(contactMeForm.phone, {
+            attr: {
+                'class':'form-control',
+                'placeholder':'Your Phone *',
+                'value':''
+            }
+        })  }}
+    </div>
+    <div class="col-md-6">
+        {{ form_row(contactMeForm.message, {
+            attr: {
+                'class':'form-control',
+                'placeholder':'Your Message *',
+                'data-validation-required-message':'Please enter a message.',
+                'value':''
+            }
+        })  }}
+    </div>
+    <div class="clearfix"></div>
+    <div class="col-lg-12 text-center">
+        <button id="sendMessageButton" class="btn btn-primary btn-xl text-uppercase" type="submit">{{ button_text }}</button>
+    </div>
+{{ form_end(contactMeForm) }}
