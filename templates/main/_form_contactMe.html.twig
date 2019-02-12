@@ -8,7 +8,7 @@
                 'id':'name',
                 'placeholder':'Your Name *',
                 'data-validation-required-message':'Please enter your name.',
-                'value':''
+                'value':ContactMePreData.name
             }
         }) }}
 
@@ -17,15 +17,16 @@
                 'class':'form-control',
                 'placeholder':'Your Email *',
                 'data-validation-required-message':'Please enter your email address.',
-                'value':''
+                'value':ContactMePreData.email
             }
         })  }}
 
         {{ form_row(contactMeForm.phone, {
+            required:false,
             attr: {
                 'class':'form-control',
-                'placeholder':'Your Phone *',
-                'value':''
+                'placeholder':'Your Phone',
+                'value':ContactMePreData.phone
             }
         })  }}
     </div>
@@ -35,12 +36,28 @@
                 'class':'form-control',
                 'placeholder':'Your Message *',
                 'data-validation-required-message':'Please enter a message.',
-                'value':''
+                'value':ContactMePreData.message
             }
         })  }}
     </div>
     <div class="clearfix"></div>
     <div class="col-lg-12 text-center">
+        {% for message in app.flashes('notice') %}
+            <div id="fail">
+                <div class="alert alert-danger">
+                    <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
+                    <strong>{{ flashMessage }}</strong>
+                </div>
+            </div>
+        {% endfor %}
+        {% for message in app.flashes('success') %}
+            <div id="success">
+                <div class="alert alert-success">
+                    <button type="button" class="close" data-dismiss="alert" aria-hidden="true">×</button>
+                    <strong>{{ message }} </strong>
+                </div>
+            </div>
+        {% endfor %}
         <button id="sendMessageButton" class="btn btn-primary btn-xl text-uppercase" type="submit">{{ button_text }}</button>
     </div>
 {{ form_end(contactMeForm) }}

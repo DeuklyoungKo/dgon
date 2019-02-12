@@ -11,27 +11,30 @@ use Symfony\Component\Routing\Annotation\Route;
 
 class MainController extends AbstractController
 {
+
+
     /**
      * @Route("/", name="main")
      */
     public function main(EntityManagerInterface $em, Request $request)
     {
-
         $form = $this->createForm(ContactMeType::class);
-        $contactMe = new ContactMe();
-
 
         $form->handleRequest($request);
 
-        if ($form->isSubmitted() && $form->isValid()){
+        /** @var ContactMe $article */
+        $contactMe = $form->getData();
 
-            /** @var ContactMe $article */
-            $contactMe = $form->getData();
+        if ($form->isSubmitted() && $form->isValid()){
 
             $em->persist($contactMe);
             $em->flush();
 
             $this->addFlash('success', 'Your message has been sent.');
+
+            return $this->redirectToRoute('main',[
+                '_fragment' => 'contact'
+            ]);
 
         }
 

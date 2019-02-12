@@ -302,5 +302,6 @@
     <{{ element|default('div') }} class="form-group">
     {{- form_widget(form, widget_attr) -}}
     {{- form_help(form) -}}
+    {{- form_errors(form) -}}
     </{{ element|default('div') }}>
 {%- endblock form_row %}
