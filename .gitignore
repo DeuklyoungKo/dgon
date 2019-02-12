@@ -21,3 +21,7 @@
 /.idea/
 /.idea/*
 ###> Phpstorm ###
+
+###> Test ###
+/ex/
+###> Test ###
