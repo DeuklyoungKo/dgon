@@ -1,12 +1,135 @@
 <!DOCTYPE html>
 <html>
     <head>
-        <meta charset="UTF-8">
-        <title>{% block title %}Welcome!{% endblock %}</title>
-        {% block stylesheets %}{% endblock %}
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+        <meta name="description" content="">
+        <meta name="author" content="">
+
+        <title>{% block title %}I'm looking for a job{% endblock %}</title>
+        {% block stylesheets %}
+            <!-- Bootstrap core CSS -->
+            <link
+                    rel="stylesheet"
+                    href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.0/css/bootstrap.min.css"
+                    integrity="sha384-PDle/QlgIONtM1aqA2Qemk5gPOE7wFq8+Em+G/hmo5Iq0CCmYZLv3fVRDJ4MMwEA"
+                    crossorigin="anonymous">
+            <!-- Custom fonts for this template -->
+
+            <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ" crossorigin="anonymous">
+            {#<link href="./git/design/vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">#}
+            <link
+                    rel="stylesheet"
+                    href="https://use.fontawesome.com/releases/v5.7.1/css/all.css"
+                    integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr"
+                    crossorigin="anonymous">
+            <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
+            <link href='https://fonts.googleapis.com/css?family=Kaushan+Script' rel='stylesheet' type='text/css'>
+            <link href='https://fonts.googleapis.com/css?family=Droid+Serif:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+            <link href='https://fonts.googleapis.com/css?family=Roboto+Slab:400,100,300,700' rel='stylesheet' type='text/css'>
+            <!-- Custom styles for this template -->
+            <link href="{{ asset('css/agency.min.css') }}" rel="stylesheet">
+            <!-- migration styles -->
+            <link href="{{ asset('css/style.css') }}?modified=1902121" rel="stylesheet">
+        {% endblock %}
     </head>
     <body>
+
+        <!-- Navigation -->
+        <nav class="navbar navbar-expand-lg navbar-dark fixed-top" id="mainNav">
+            <div class="container">
+                <a class="navbar-brand js-scroll-trigger" href="#page-top">Hallo. I am Gon</a>
+                <button class="navbar-toggler navbar-toggler-right" type="button" data-toggle="collapse" data-target="#navbarResponsive" aria-controls="navbarResponsive" aria-expanded="false" aria-label="Toggle navigation">
+                    Menu
+                    <i class="fa fa-bars"></i>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarResponsive">
+                    <ul class="navbar-nav text-uppercase ml-auto">
+                        <li class="nav-item">
+                            <a class="nav-link js-scroll-trigger" href="#services">Technical Skills</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link js-scroll-trigger" href="#portfolio">Portfolio</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link js-scroll-trigger" href="#about">Work Experience</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link js-scroll-trigger" href="#team">About This Site</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link js-scroll-trigger" href="#contact">Contact</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true" aria-expanded="false">Made by other framework</a>
+                            <div class="dropdown-menu">
+                                <a class="dropdown-item" href="https://www.dgon.eu/wp">WordPress Ver.</a>
+                                <!--
+                                                <div class="dropdown-divider"></div>
+                                -->
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
         {% block body %}{% endblock %}
-        {% block javascripts %}{% endblock %}
+        <!-- Footer -->
+        <footer>
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-4">
+                        <span class="copyright">Copyright 2018 Deuklyoung Ko All rights reserved.</span>
+                    </div>
+                    <div class="col-md-4">
+                        <ul class="list-inline social-buttons">
+                            <li class="list-inline-item">
+                                <a href="https://www.linkedin.com/in/dgon/?locale=en_US" target="_blank">
+                                    <i class="fa fa-linkedin"></i>
+                                </a>
+                            </li>
+                            <li class="list-inline-item">
+                                <a href="https://www.xing.com/profile/Deuklyoung_Ko/cv?sc_o=mxb_p" target="_blank">
+                                    <i class="fab fa-xing-square"></i>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+
+                    <div class="col-md-4">
+                        <ul class="list-inline">
+                            <li class="list-inline-item">
+                                <h3>
+                                    <a href="https://www.dgon.eu/wp" class="badge badge-danger">WordPress ver.</a>
+                                </h3>
+                            </li>
+                        </ul>
+                    </div>
+
+                </div>
+            </div>
+        </footer>
+        {% block javascripts %}
+            <!-- Bootstrap core JavaScript -->
+            <script
+                    src="http://code.jquery.com/jquery-3.3.1.min.js"
+                    integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+                    crossorigin="anonymous"></script>
+            <script
+                    src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.0/js/bootstrap.min.js"
+                    integrity="sha384-7aThvCh9TypR7fIc2HV4O/nFMVCBwyIUKL8XCtKE+8xgCgl/PQGuFsvShjr74PBp"
+                    crossorigin="anonymous"></script>
+
+            <!-- Plugin JavaScript -->
+            <script src="{{ asset('js/jquery.easing.min.js') }}"></script>
+
+            <!-- Contact form JavaScript -->
+            <script src="{{ asset('js/jqBootstrapValidation.min.js') }}"></script>
+            <script src="{{ asset('js/contact_me.min.js') }}"></script>
+
+            <!-- Custom scripts for this template -->
+            <script src="{{ asset('js/agency.min.js') }}"></script>
+
+        {% endblock %}
     </body>
 </html>

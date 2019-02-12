@@ -1,0 +1,17 @@
+@charset "utf-8";
+
+.phpTeg{
+  color:#ff8a00
+}
+
+header.masthead{
+  background-image: url(../img/main01.png);
+}
+
+.addTopPadding{
+  margin-top: 2rem;
+}
+
+.text-white{
+  color: #FFFFFF !important;
+}
